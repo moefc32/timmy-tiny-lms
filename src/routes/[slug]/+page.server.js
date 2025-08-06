@@ -1,20 +1,20 @@
 import { error } from '@sveltejs/kit';
-import model from '$lib/server/model/course';
+import model from '$lib/server/model/lesson';
 
 export async function entries() {
-    const courses = await model.getData();
-    return courses;
+    const lessons = await model.getData();
+    return lessons;
 }
 
 export async function load({ params }) {
     const { slug } = params;
-    const course = await model.getData(slug);
+    const lessons = await model.getData(slug);
 
-    if (!course.length) {
+    if (!lessons.length) {
         throw error(404, 'Not Found');
     }
 
     return {
-        courses,
+        lessons,
     };
 }

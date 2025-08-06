@@ -1,9 +1,9 @@
 import sqlite from './sqlite';
-import { TABLE_COURSE } from './model/tables';
+import { TABLE_LESSON } from './model/tables';
 
 export default function setSchema() {
     const queries = [
-        `CREATE TABLE IF NOT EXISTS ${TABLE_COURSE} (
+        `CREATE TABLE IF NOT EXISTS ${TABLE_LESSON} (
             id TEXT PRIMARY KEY NOT NULL,
             slug TEXT NOT NULL,
             title TEXT NOT NULL,

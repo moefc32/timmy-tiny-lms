@@ -1,1 +1,1 @@
-export const TABLE_COURSE = 'course';
+export const TABLE_LESSON = 'lesson';

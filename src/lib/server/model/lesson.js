@@ -1,6 +1,6 @@
 import { init as cuid2 } from '@paralleldrive/cuid2';
 import sqlite from '../sqlite';
-import { TABLE_COURSE } from './tables';
+import { TABLE_LESSON } from './tables';
 
 export default {
     searchData: async (keyword) => {
@@ -13,7 +13,7 @@ export default {
                     slug,
                     title,
                     timestamp
-                FROM ${TABLE_COURSE}
+                FROM ${TABLE_LESSON}
                 WHERE LOWER(title) LIKE LOWER(?);
             `, [search]);
 
@@ -31,7 +31,7 @@ export default {
                         id,
                         slug,
                         title
-                    FROM ${TABLE_COURSE}
+                    FROM ${TABLE_LESSON}
                     ORDER BY timestamp DESC;
                 `)
                 : sqlite(`
@@ -42,7 +42,7 @@ export default {
                         description,
                         content,
                         timestamp
-                    FROM ${TABLE_COURSE}
+                    FROM ${TABLE_LESSON}
                     WHERE slug = ?;
                 `, [slug]);
 
@@ -58,7 +58,7 @@ export default {
             const cuid = cuid2({ length: 12 })();
 
             const result = sqlite(`
-                INSERT INTO ${TABLE_COURSE} (
+                INSERT INTO ${TABLE_LESSON} (
                     id,
                     slug,
                     title,
@@ -94,7 +94,7 @@ export default {
             const timestamp = Date.now();
 
             const result = sqlite(`
-                UPDATE ${TABLE_COURSE} SET
+                UPDATE ${TABLE_LESSON} SET
                     slug        = COALESCE(?, slug),
                     title       = COALESCE(?, title),
                     description = COALESCE(?, description),
@@ -127,7 +127,7 @@ export default {
     deleteData: async (id) => {
         try {
             const result = sqlite(`
-                DELETE FROM ${TABLE_COURSE}
+                DELETE FROM ${TABLE_LESSON}
                 WHERE id = ?;
             `, [id]);
 

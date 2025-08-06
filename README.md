@@ -1,14 +1,12 @@
-# Envbox
+# Timmy Tiny LMS
 <a href="https://opensource.org/license/mit"><img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" height="24" /></a>
 <a href="https://pnpm.io/"><img src="https://img.shields.io/badge/Package-PNPM-orange?style=flat-square" height="24" /></a>
 <img src="https://img.shields.io/badge/Module-ECMAScript-yellow?style=flat-square" height="24" />
 
-Envbox is a SvelteKit application to store .env configurations
-
-![image](https://github.com/user-attachments/assets/d097051c-5be8-4dde-becc-0082199dc82b)
+Timmy tiny learning management system
 
 ## Features
-- Create, update, and delete environment configurations
+- Tiny learning management system that provides a simple interface for lessons
 - Responsive design for use on both desktop and mobile devices
 - Automatic database installation
 
@@ -34,20 +32,8 @@ Envbox is a SvelteKit application to store .env configurations
    ```
 
 ## Deployment
-1. Clone this repository to the development server
-2. Copy the default environment file and ensure all variables are correctly filled
+1. Adjust the `VITE_BASE_PATH` inside the environment file
+2. Run the deployment script
    ```sh
-   cp .env.example .env
-   ```
-3. Install all required dependencies
-   ```sh
-   pnpm i
-   ```
-4. Optimize the application for production
-   ```sh
-   pnpm run build
-   ```
-5. Serve the application using PM2
-   ```sh
-   pm2 start ecosystem.config.cjs
+   pnpm run deploy
    ```
