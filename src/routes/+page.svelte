@@ -1,4 +1,7 @@
 <script>
+    import LessonCard from '$lib/component/LessonCard.svelte';
 </script>
 
-<section></section>
+<section>
+    <LessonCard />
+</section>

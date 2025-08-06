@@ -30,7 +30,8 @@ export default {
                     SELECT
                         id,
                         slug,
-                        title
+                        title,
+                        description
                     FROM ${TABLE_LESSON}
                     ORDER BY timestamp DESC;
                 `)
