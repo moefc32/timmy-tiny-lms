@@ -3,7 +3,7 @@
     import LessonDescription from '$lib/component/LessonDescription.svelte';
 </script>
 
-<section class="flex flex-1 flex-col gap-6 p-6 w-full">
+<section class="flex flex-1 flex-col gap-6 mb-12 p-6 w-full">
     <div class="tabs tabs-lift">
         <input
             type="radio"

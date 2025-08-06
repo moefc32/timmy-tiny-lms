@@ -1,7 +1,7 @@
 <script>
 </script>
 
-<div class="card bg-base-100 w-96 transition-all shadow hover:shadow-lg">
+<div class="card bg-base-100 transition-all shadow hover:shadow-lg">
     <figure>
         <img
             src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
