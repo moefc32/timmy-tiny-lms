@@ -1,0 +1,39 @@
+{
+    "name": "timmy-tiny-lms",
+    "private": true,
+    "version": "0.0.1",
+    "type": "module",
+    "scripts": {
+        "dev": "vite dev",
+        "build": "vite build",
+        "preview": "vite preview",
+        "prepare": "svelte-kit sync || echo ''",
+        "deploy": "test -f .env && (pnpm build && pnpx gh-pages -d build --dotfiles) || echo 'Error, .env file is missing, deploy aborted!'"
+    },
+    "devDependencies": {
+        "@sveltejs/adapter-static": "^3.0.8",
+        "@sveltejs/kit": "^2.27.1",
+        "@sveltejs/vite-plugin-svelte": "^5.1.1",
+        "@tailwindcss/vite": "^4.1.11",
+        "daisyui": "5.0.0",
+        "gh-pages": "^6.3.0",
+        "svelte": "^5.37.3",
+        "svoast": "^3.0.3",
+        "tailwindcss": "^4.1.11",
+        "vite": "^6.3.5"
+    },
+    "dependencies": {
+        "@fontsource-variable/plus-jakarta-sans": "^5.2.6",
+        "@paralleldrive/cuid2": "^2.2.2",
+        "better-sqlite3": "^11.10.0",
+        "dotenv": "^16.6.1",
+        "lucide-svelte": "^0.474.0"
+    },
+    "pnpm": {
+        "onlyBuiltDependencies": [
+            "@tailwindcss/oxide",
+            "better-sqlite3",
+            "esbuild"
+        ]
+    }
+}
